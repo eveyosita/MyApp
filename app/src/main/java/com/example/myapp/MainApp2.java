@@ -30,7 +30,7 @@ public class MainApp2 extends AppCompatActivity {
                 int wei = Integer.parseInt(weightEt.getText().toString());
 
                 float bmi = calculateBmi(hei,wei);
-                // call method calculateBmi(h,w) into bmi
+
 
                 String resultT = null;
                 if (bmi < 18.5)
@@ -43,7 +43,7 @@ public class MainApp2 extends AppCompatActivity {
                     resultT = "อ้วนมาก";
 
 
-//                String msg = "Value BMI is "+String.format(Locale.US,"%.2f",bmi);
+//                String msg = "Value BMI is "+String.format(Locale.US,"%.2f",bmi)
                 String msg = "เกณฑ์น้ำหนักของคุณ: "+resultT;
 
 
@@ -69,8 +69,6 @@ public class MainApp2 extends AppCompatActivity {
         //bmi = kg /m^2
 
         float height = heightIncm / 100f;
-        // บรรทัก 42 เติม f หลัง100 เพื่อให้ 100เป็น float
-        // ถ้าใส่ 100.00 จะเป็น type double
         Log.i(TAG,"height is "+String.valueOf(height));
         float bmi = weightKg / (height * height);
         return bmi;
